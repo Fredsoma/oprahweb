@@ -1,0 +1,452 @@
+/*header style start */
+
+.header1{
+    position: relative;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D9;
+    height: 180px;
+}
+
+.headertext{
+    position: relative;
+    left: 210px;
+    text-align: center;
+    background: linear-gradient(to right, #0F75BC80 0%, #0172c480 70%);
+    width: 835px;
+    height: 292px;
+    border-radius: 27px;
+    color: #FFFFFF;
+}
+
+.headertext h1{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77.45px;
+}
+
+.headertext p{
+    position: relative;
+    bottom: 30px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29.05px;
+}
+
+
+.navlist{
+  position: relative;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 300;
+  text-decoration: none;
+  border: 1px solid #0F75BC;
+  border-radius: 17px;
+  background-color: #0F75BC;
+  width: 580px;
+  height: 51px;
+}
+
+.navlist a{
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24.2px;
+  color: #FFFFFF;
+}
+
+.chevrondown{
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+}
+
+.contact{
+    position: relative;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.uni{
+    width: 53px;
+    height: 46px;
+    border-radius: 10px;
+    rotate: -180deg;
+    cursor: pointer;
+}
+
+.find{
+    display: flex;
+   justify-content: center;
+    text-align: center;
+    border: 1px solid #0F75BC;
+    background-color: #0F75BC;
+    border-radius: 27px;
+    width: 330px;
+    height: 61px;
+    margin-top: 20px;
+    margin-left: 450px;
+}
+
+.find a{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38.73px;
+    color: #FFFFFF;
+}
+
+.chevronright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 5px solid #FFFFFF;
+    border-radius: 100px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.2px;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu when the button is clicked */
+.show {
+    display: block;
+}
+
+.header-rectangle{
+    background-color: #0F75BC;
+   padding: 1px 0px 5px;
+   color: #FFFFFF;
+}
+
+.header-rectangle h1{
+    font-weight: 700;
+    font-size: 25px;
+    
+}
+
+.white{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 30px 50px 30px;
+}
+
+
+.whitebox{
+    border: 5px solid #0F75BC;
+    background-color: #FFFFFF;
+    border-radius: 27px;
+    width: 500px;
+    height: 400px;
+}
+
+.info{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  .info p{
+    position: relative;
+    bottom: 50px;
+    text-align: center;
+  }
+
+  .five{
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 116.18px;
+  }
+
+  .book{
+    border: 1px solid #D9D9D9;
+    background-color: #D9D9D9;
+    color: #000000;
+    width: 500px;
+    height: 104px;
+    padding: 5px 20px 5px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 48.41px;
+  }
+
+ 
+
+  .brown{
+    position: relative;
+    top: 60px;
+    border: 1px solid #D9D9D9;
+    background-color: #D9D9D9;
+    border-radius: 17px;
+    width: 250px;
+    height: 80px;
+  }
+
+/*header style end */
+
+/*rectangle style start */
+
+.rectangle0{
+  border-radius: 27px;
+  background: linear-gradient(to right, #0174c787 50%, #0173c4f1 100%);
+  width: 800px;
+  height: 440px;
+  margin-left: 220px;
+  margin-top: 50px;
+}
+
+.rectangle0 p{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47.45px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 5px;
+}
+
+ /*rectangle style end */
+
+
+ /*footer style start */
+
+ .footer{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-top: 100px;
+ }
+
+ .footertxt{
+  position: relative;
+  bottom: 28px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 38.73px;
+ }
+
+ .box1{
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  width:130px;
+  height: 35px;
+  padding: 5px;
+  background-color: black;
+  
+}
+
+.ftext2{
+  position: relative;
+  bottom: 30px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.ftext3{
+  color: #FFFFFF;
+  font-size: 12px;
+}
+
+.apple{
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.box2{
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  width:120px;
+  height: 35px;
+  padding: 5px;
+  background-color: black;
+  
+}
+
+.ftext4{
+  position: relative;
+  bottom: 15px;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.ftext5{
+  color: #FFFFFF;
+  font-size: 12px;
+}
+
+.playstore{
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.mainbox{
+  position: relative;
+  bottom: 30px;
+  display: flex;
+  gap: 1rem;
+}
+
+.about h1{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29.05px;
+}
+
+.about2 h2{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.2px;
+  height: 16px;
+}
+
+.our{
+  color: #ED1C24;
+}
+
+#legalh{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29.05px;
+}
+
+.legal2 h2{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.2px;
+  height: 18px;
+}
+
+.localmain{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.local{
+  width: 40px;
+  height: 40px;
+}
+
+.tel{
+  width: 40px;
+  height: 40px;
+}
+
+.mail1{
+  width: 40px;
+  height: 40px;
+}
+
+.town{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24.2px;
+}
+
+.number{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24.2px;
+}
+
+.mail{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24.2px;
+}
+
+
+/*footer style end */
+
+/*socialmedia style start */
+
+.media img{
+width: 40px;
+height: 40px;
+}
+
+.media{
+margin-top: 10px;
+text-align: center;
+}
+/*socialmedia style end */
+
+/*copyright style start */
+.copyright{
+text-align: center;
+background-color: #0F75BC;
+color: #FFFFFF;
+font-weight: 700;
+font-size: 20px;
+line-height: 29.05px;
+width: 100%;
+height: 29px;
+padding: 10px 0px 10px;
+}
+/*copyright style end */
