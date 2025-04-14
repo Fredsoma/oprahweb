@@ -3,18 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us | Oprah</title>
+    <title>Apply – Software Engineer | Oprah</title>
     <link href="../images/Oprah.png" rel="icon" />
-    <link rel="stylesheet" href="../styles/contact.css" />
-
-    <!-- Include EmailJS Library -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function(){
-        emailjs.init("OS_DgdTdYnwHf-c-4"); // Replace with your actual EmailJS Public Key
-      })();
-    </script>
-    
+    <link rel="stylesheet" href="../styles/jobcareer.css" />
+    <!-- Font Awesome for icons if needed -->
+    <link rel="stylesheet" href="../assets/fontawesome/CSS/all.css" />
   </head>
   <body>
      <!-- HEADER SECTION -->
@@ -25,72 +18,53 @@
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
-        <a href="careers.html" class="contact">Careers</a>
+        <a href="contact.html" class="contact">Contact Us</a>
       </nav>
     </div>
     <div class="hero container">
       <!-- Full-width hero with overlay --> 
       <div class="hero-overlay">
-        <h1>Contact Us</h1>
-        <p>Have a question or need support? We're here to help.</p>
+        <h1>Healthcare IT Consultant</h1>
+          <p>
+            Help healthcare facilities optimize their digital systems and ensure compliance with cutting-edge technology.
+          </p>
       </div>
     </div>
   </header>
 
 
-    <!-- MAIN CONTENT -->
+    <!-- APPLICATION FORM -->
     <main class="container">
-      <!-- CONTACT FORM SECTION -->
-      <section class="contact-form-section">
-        <h2>Get in Touch</h2>
-        <form id="contact-form" class="contact-form">
+      <section class="application-form-section">
+        <h2>Apply Now</h2>
+        <form id="apply-form" class="application-form" novalidate>
           <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required />
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full_name" placeholder="Your Full Name" required />
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <!-- Using 'email' here to match the EmailJS template placeholder -->
-            <input type="email" id="email" name="email" placeholder="your@email.com"
-              required />
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" placeholder="Your message here..." required></textarea>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1234567890" required />
           </div>
-          <!-- Optional hidden field for subject/title -->
-          <input type="hidden" name="title" value="Contact Request" />
-          <button type="submit" class="btn-submit">Send Message</button>
+          <div class="form-group">
+            <label for="cover-letter">Cover Letter</label>
+            <textarea id="cover-letter" name="cover_letter" rows="6" placeholder="Detail your expertise in healthcare IT and your approach to digital transformation..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="resume">Resume</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" />
+          </div>
+          <button type="submit" class="btn-submit">Submit Application</button>
         </form>
-      </section>
-
-      <!-- MAP SECTION WITH GOOGLE MAP EMBEDDED -->
-      <section class="map-section">
-        <h2>Our Location</h2>
-        <iframe
-          title="infinity"
-          width="100%"
-          height="300"
-          frameborder="0"
-          scrolling="no"
-          marginheight="0"
-          marginwidth="0"
-          src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=glacier%20italien%20cradat,%20yaounde%20,%20cameroon+(infinity%20studio)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-          <a href="https://www.maps.ie/population/">Find Population on Map</a>
-        </iframe>
       </section>
     </main>
 
-    <!-- Loading Spinner -->
-    <div id="spinner" class="spinner">
-      <div></div>
-    </div>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">Message sent successfully!</div>
-
-    <!-- FOOTER SECTION -->
-    <footer class="footer container">
+     <!-- FOOTER SECTION -->
+     <footer class="footer container">
       <div class="footer-logo">
         <img class="logo" id="logo1" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
         <p class="footertxt">Understand, Track and Improve Your Health</p>
@@ -153,39 +127,5 @@
       <p class="copyright">&copy; 2025 Oprah. All Rights Reserved.</p>
     </footer>
 
-    <!-- EmailJS Form Submission Script with Loading Spinner, Toast Notification, and Form Reset -->
-    <script>
-      document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent the default form submission
-
-        // Show loading spinner
-        var spinner = document.getElementById('spinner');
-        spinner.classList.add('show');
-
-        // Send form via EmailJS
-        emailjs.sendForm("service_4mbywvc", "template_ft82dax", this)
-          .then(function() {
-            // Hide spinner
-            spinner.classList.remove('show');
-
-            // Show toast notification
-            var toast = document.getElementById('toast');
-            toast.classList.add('show');
-
-            // Clear the form fields after submission
-            document.getElementById('contact-form').reset();
-
-            // Hide the toast after 3 seconds
-            setTimeout(function() {
-              toast.classList.remove('show');
-            }, 3000);
-          }, function(error) {
-            // Hide spinner on error as well
-            spinner.classList.remove('show');
-            alert('Failed to send message. Please try again later.');
-            console.error('EmailJS error:', error);
-          });
-      });
-    </script>
   </body>
 </html>
