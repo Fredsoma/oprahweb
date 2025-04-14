@@ -112,11 +112,9 @@ img {
 .hero-overlay h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: var(--white);
 }
 .hero-overlay p {
   font-size: 1.2rem;
-  color: var(--white);
 }
 
 /* =========================================
