@@ -27,17 +27,11 @@ body {
   font-family: var(--font-primary);
   background: #f9f9f9;
   color: #333;
-  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
   color: var(--white);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 .container {
@@ -61,6 +55,11 @@ img {
   align-items: center;
   flex-wrap: wrap;
   padding: 50px;
+}
+
+.header-content {
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .nav {
@@ -94,7 +93,7 @@ img {
   background-color: var(--white);
 }
 
-/* Hero Section */
+/* Hero Section (Header Rectangle with Overlay) */
 .hero {
   position: relative;
   height: 300px;
@@ -116,7 +115,6 @@ img {
 .hero-overlay p {
   font-size: 1.2rem;
 }
-
 /* =========================================
    CONTACT FORM SECTION
 ======================================== */
