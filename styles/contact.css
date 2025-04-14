@@ -264,9 +264,7 @@ a {
   font-size: 1.2rem;
   font-weight: 600;
 }
-#email {
-  background-color: var(--blue);
-}
+
 .copyright {
   text-align: center;
   font-size: 0.9rem;
