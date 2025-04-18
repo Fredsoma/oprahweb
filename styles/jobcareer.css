@@ -111,6 +111,13 @@ a {
 .hero-overlay p {
   font-size: 1.2rem;
 }
+.hero-overlay #healthcareit {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero-overlay #healthcareit2 {
+  font-size: 1rem;
+}
 /* =========================================
    Application Form Section
 ======================================== */
