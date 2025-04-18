@@ -631,6 +631,10 @@ img {
   background-color: var(--light-gray);
   padding: 20px;
 }
+.swiper-button-next,
+.swiper-button-prev{
+cursor: default;
+}
 
 .swiper {
   border-radius: 15px;
