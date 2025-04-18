@@ -1,20 +1,14 @@
-/* =========================================
-   Global Styles & Variables
-======================================== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* myoprah.css */
 
+/* Variables & Reset */
 :root {
-  --primary-blue: #0F75BC;
-  --blue: #0F75BC;
-  --accent-green: #56AD89;
+  --blue: #0f75bc;
   --green: #56ad89;
-  --accent-red: #ED1C24;
-  --white: #FFFFFF;
-  --light-gray: #D9D9D9;
-  --font: 'Roboto', sans-serif;
-  --transition: 0.3s ease;
+  --dark: #333;
+  --gray-light: #f0f0f0;
+  --white: #fff;
+  --font: "Roboto", sans-serif;
 }
-
 *,
 *::before,
 *::after {
@@ -22,11 +16,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: var(--font);
-  line-height: 1.5;
-  color: #333;
+  color: var(--dark);
+  line-height: 1.6;
 }
 
 a {
@@ -34,12 +27,16 @@ a {
   color: var(--white);
 }
 
+/* Utility */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
 
-/* =========================================
-   HEADER
-======================================== */
+/* Header */
 .header {
-  background-color: var(--gray);
   color: var(--white);
 }
 
@@ -50,6 +47,11 @@ a {
   align-items: center;
   flex-wrap: wrap;
   padding: 50px;
+}
+
+.header-content {
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .nav {
@@ -79,229 +81,93 @@ a {
   cursor: pointer;
 }
 
-#logo1:hover{
+#logo1:hover {
   background-color: var(--white);
 }
-.language-switcher {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background-color: var(--blue);
-  border-radius: 10px;
-  padding: 6px 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease;
-}
 
-.language-switcher:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-}
-
-.language-option {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.language-option:hover {
-  background-color: var(--light-gray);
-}
-
-.language-option img {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.language-option span {
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--text-color);
-}
-
-/* Header Rectangle */
-.header-rectangle {
-  background-color: var(--primary-blue);
-  padding: 70px 10px 70px;
+/* Hero */
+.hero {
   text-align: center;
+  padding: 4rem 0;
+  background: url(../images/dna1.jpg) no-repeat center/cover;
 }
-
-.header-rectangle h1 {
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 1.2;
-}
-
-/* =========================================
-   RECTANGLE SECTION
-======================================== */
-.rectangle {
-  display: flex;
-  justify-content: center;
-  margin: 40px auto;
-}
-
-.rectangle-box {
-  border-radius: 50px;
-  border: 5px solid var(--primary-blue);
-  background-color: var(--white);
-  width: 90%;
-  max-width: 650px;
-  height: 400px;
-}
-
-/* =========================================
-   SERVICES SECTION
-======================================== */
-.services {
-  padding: 40px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.services p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.info {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-bottom: 40px;
-}
-
-.info .stat {
-  text-align: center;
-}
-
-.info .number {
-  font-weight: 700;
-  font-size: 2rem;
-  color: var(--accent-green);
-}
-
-.info .label {
-  font-size: 1rem;
-  color: var(--primary-blue);
-}
-
-/* Doctors Section */
-.doctors-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 40px;
-}
-
-.doctor-visuals {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
-
-.doc-rect {
-  flex: 1 1 300px;       /* Allows flexibility with a minimum width */
-  max-width: 100%;        /* Two columns on larger screens */
-  height: 300px;         /* Fixed height (adjust as needed) */
-  border-radius: 20px;
-  border: 5px solid var(--primary-blue); /* Using your brand blue variable */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.doc-rect:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-
-.doc-rect--1 {
-  background: url(../images/health.jpeg) no-repeat center/cover;
-  width: 300px;
-}
-
-.doc-rect--2 {
-  background: url(../images/health2.jpeg) no-repeat center/cover;
-  
-}
-
-.doctor-info {
-  flex: 1 1 300px;
-  text-align: left;
-  padding: 20px;
-}
-
-.doctor-info h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: var(--primary-blue);
-}
-
-.doctor-info p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.icons {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.icons img{
-  width: 40px;
-  height: 40px;
-}
-
-/* Registration Section */
-.registration {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 40px;
-  gap: 2rem;
-}
-
-.stores {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.store {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: var(--primary-blue);
-}
-
-.clinic-btn {
-  padding: 15px 30px;
-  background-color: var(--primary-blue);
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
   color: var(--white);
-  border: none;
-  border-radius: 25px;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+.hero-cta a,
+.hero-cta .btn-register {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
   font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background var(--transition);
+  transition: opacity 0.3s;
+}
+.btn-download {
+  background: var(--blue);
+  color: #fff;
+}
+.btn-register {
+  background: var(--green);
+  color: #fff;
+}
+.hero-cta a:hover,
+.hero-cta .btn-register:hover {
+  opacity: 0.85;
 }
 
-.clinic-btn:hover {
-  background-color: var(--accent-green);
+/* Stats */
+.stats {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 3rem ;
+}
+.stat-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.stat-number {
+  font-size: 2rem;
+  color: var(--blue);
+}
+.stat-label {
+  font-size: 1rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* Features Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.feature {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s;
+}
+.feature:hover {
+  transform: translateY(-5px);
+}
+.feature-icon {
+  width: 50px;
+  margin-bottom: 1rem;
 }
 
 /* =========================================
@@ -311,25 +177,22 @@ a {
   background-color: var(--blue);
   color: var(--white);
   padding: 40px 20px;
+  margin-top: 3rem;
 }
-
 .footer-logo {
   text-align: center;
   margin-bottom: 30px;
 }
-
 .footer-logo p {
   font-size: 1.2rem;
   margin: 10px 0;
 }
-
 .download-links {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin-top: 10px;
 }
-
 .store-link {
   display: flex;
   flex-direction: column;
@@ -337,39 +200,32 @@ a {
   gap: 5px;
   font-size: 0.9rem;
 }
-
 .footer-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 30px;
+  text-align: center;
 }
-
 .footer-links h3 {
   margin-bottom: 10px;
 }
-
 .footer-links ul {
   list-style-type: none;
 }
-
 .footer-links li {
   margin-bottom: 5px;
 }
-
 .footer-links a {
   color: var(--white);
   transition: color var(--transition-speed);
 }
-
 .footer-links a:hover {
   color: var(--green);
 }
-
 .contact-info {
   text-align: center;
 }
-
 .contact-info div {
   margin: 10px 0;
   display: flex;
@@ -377,27 +233,19 @@ a {
   justify-content: center;
   gap: 8px;
 }
-
 .footer-social {
   text-align: center;
   margin-bottom: 20px;
 }
-
 .footer-social a {
   margin: 0 5px;
 }
-
 .footertxt {
   margin: 10px 0;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-#email{
-  background-color: var(--blue);
-}
-
-/* Copyright */
 .copyright {
   text-align: center;
   font-size: 0.9rem;
@@ -405,125 +253,38 @@ a {
   background-color: var(--blue);
 }
 
-/* =========================================
-   SLIDER SECTION (Optional)
-======================================== */
-.slider {
-  margin: 40px auto;
-  text-align: center;
-}
-
-.swiper-container {
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
-  background: linear-gradient(
-    to right,
-    rgba(1, 116, 199, 0.55) 50%,
-    rgba(1, 115, 196, 1) 100%
-  );
-  border: 1px solid var(--primary-blue);
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.swiper-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.swiper-slide {
-  width: 225px;
-  height: 225px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  border: 5px solid var(--white);
-}
-
-/* Navigation Buttons */
-.swiper-button-next,
-.swiper-button-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--white);
-  border: 1px solid var(--white);
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.swiper-button-next {
-  right: 10px;
-}
-
-.swiper-button-prev {
-  left: 10px;
-}
-
-/* =========================================
-   RESPONSIVE MEDIA QUERIES
-======================================== */
+/* Responsive */
 @media (max-width: 768px) {
   .header-top,
-  .navlist {
+  .nav {
     flex-direction: column;
     gap: 10px;
   }
-
-  .header-content h1 {
-    font-size: 2rem;
-  }
-
-  .header-rectangle h1 {
-    font-size: 1.8rem;
-  }
-  .rectangle-box {
-    width: 90%;
-    height: auto;
+  .header-content {
     padding: 20px;
   }
-  .services p {
-    font-size: 1rem;
+  .container {
+    padding: 20px;
   }
-  .info {
+  .footer-links {
     flex-direction: column;
-    gap: 1rem;
-  }
-  .doctor-visuals,
-  .doctor-info {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-  .doc-rect {
-    max-width: 100%;
-    margin-bottom: 20px;  /* Spacing between stacked cards */
-  }
-  .registration {
-    gap: 1rem;
-  }
-  .swiper-container {
-    width: 200px;
-    height: 200px;
-  }
-  .swiper-slide {
-    width: 180px;
-    height: 180px;
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
-  .header-rectangle h1 {
-    font-size: 1.5rem;
+  .header-text h1 {
+    font-size: 1.8rem;
+  }
+  .header-text p {
+    font-size: 1rem;
   }
   .nav a {
     font-size: 0.9rem;
-    padding: 6px 10px;
+    padding: 0.5rem 0.75rem;
   }
-  .footer-text {
+  .footer-logo p,
+  .footertxt {
     font-size: 1rem;
   }
 }
