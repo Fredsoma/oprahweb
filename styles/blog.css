@@ -27,17 +27,11 @@ body {
   font-family: var(--font-primary);
   background: #f9f9f9;
   color: #333;
-  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
   color: var(--white);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 .container {
@@ -99,7 +93,7 @@ img {
   background-color: var(--white);
 }
 
-/* Hero Section */
+/* Hero Section (Header Rectangle with Overlay) */
 .hero {
   position: relative;
   height: 300px;
