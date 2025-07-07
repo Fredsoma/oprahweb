@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oprahsys | Digital Solution for Healthcare Facilities</title>
     <link href="../images/Oprah.png" rel="icon" />
     <link rel="stylesheet" href="../swiperjs/swiper-bundle.min.css" />
@@ -13,13 +13,27 @@
     <!-- HEADER -->
     <header class="header">
       <div class="header-top container">
-        <img class="logo" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
+        <img
+          class="logo"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
+        <!-- hamburger for mobile -->
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- navigation -->
         <nav class="nav">
           <a href="home.html">Home</a>
           <a href="about.html">About</a>
           <a href="blog.html">Blog</a>
           <a href="careers.html">Careers</a>
-          <a href="contact.html" class="contact">Contact</a>
+          <a class="contact" id="cont" href="contact.html">Contact Us</a>
         </nav>
       </div>
       <!-- HERO -->
@@ -40,7 +54,9 @@
           <div class="feature">
             <i class="fa-solid fa-file-medical"></i>
             <h3>Digital Records</h3>
-            <p>Access and update patient files in real time, from any device.</p>
+            <p>
+              Access and update patient files in real time, from any device.
+            </p>
           </div>
           <div class="feature">
             <i class="fa-solid fa-user-shield"></i>
@@ -105,70 +121,164 @@
       </section>
     </main>
 
-   <!-- FOOTER SECTION -->
-   <footer class="footer container">
-    <div class="footer-logo">
-      <img class="logo" id="logo1" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
-      <p class="footertxt">Understand, Track and Improve Your Health</p>
-      <div class="download-links">
-        <a href="#" class="store-link">
-          <img src="../images/apple3.png" alt="App Store" />
-          <span>Download on the App Store</span>
-        </a>
-        <a href="#" class="store-link">
-          <img src="../images/playstore.png" width="49" height="49" alt="Google Play" />
-          <span>Get it on Google Play</span>
-        </a>
-      </div>
-    </div>
-    <div class="footer-links">
-      <div class="about-links">
-        <h3>About Us</h3>
-        <ul>
-          <li><a href="#">Our Provider Digitalization Suite</a></li>
-          <li><a href="#">Oprah Systems</a></li>
-          <li><a href="#">Oprah Doc</a></li>
-          <li><a href="#">Public Health &amp; Data Partnership</a></li>
-          <li><a href="#">Data and Insights</a></li>
-        </ul>
-      </div>
-      <div class="legal-links">
-        <h3>Legal</h3>
-        <ul>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy Notice</a></li>
-          <li><a href="#">Information Security</a></li>
-          <li><a href="#">Oprah Service Levels</a></li>
-          <li><a href="#">Cookie Notice</a></li>
-          <li><a href="#">Consent for Children</a></li>
-          <li><a href="#">Consent for Adult</a></li>
-        </ul>
-      </div>
-      <div class="contact-info">
-        <div class="location">
-          <img src="../images/location.png" width="25" height="25" alt="Location Icon" />
-          <p>Yaoundé, Cameroon</p>
-        </div>
-        <div class="phone">
-          <img src="../images/phone.png" width="25" height="25" alt="Phone Icon" />
-          <p>+237 679 724 561</p>
-        </div>
-        <div class="email">
-          <img src="../images/mail.png" id="email" width="25" height="25" alt="Email Icon" />
-          <p>oprahhealth@gmail.com</p>
+    <!-- FOOTER SECTION -->
+    <footer class="footer container">
+      <div class="footer-logo">
+        <img
+          class="logo"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
+        <p class="footertxt">Understand, Track and Improve Your Health</p>
+        <div class="download-links">
+          <a href="#" class="store-link">
+            <img src="../images/apple3.png" alt="App Store" />
+            <span>Download on the App Store</span>
+          </a>
+          <a href="#" class="store-link">
+            <img
+              src="../images/playstore.png"
+              width="49"
+              height="49"
+              alt="Google Play"
+            />
+            <span>Get it on Google Play</span>
+          </a>
         </div>
       </div>
-    </div>
-    <div class="footer-social">
-      <a href="#"><img src="../images/instagram.png" width="25" height="25" alt="Instagram" /></a>
-      <a href="#"><img src="../images/linkedin.png" width="25" height="25" alt="LinkedIn" /></a>
-      <a href="#"><img src="../images/twitter.png" width="25" height="25" alt="Twitter" /></a>
-      <a href="#"><img src="../images/youtube.png" width="25" height="25" alt="YouTube" /></a>
-      <a href="#"><img src="../images/facebook.png" width="25" height="25" alt="Facebook" /></a>
-    </div>
-    <p class="copyright">&copy; 2025 Oprah. All Rights Reserved.</p>
-  </footer>
+      <div class="footer-links">
+        <div class="about-links">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Our Provider Digitalization Suite</a></li>
+            <li><a href="#">Oprah Systems</a></li>
+            <li><a href="#">Oprah Doc</a></li>
+            <li><a href="#">Public Health &amp; Data Partnership</a></li>
+            <li><a href="#">Data and Insights</a></li>
+          </ul>
+        </div>
+        <div class="legal-links">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Notice</a></li>
+            <li><a href="#">Information Security</a></li>
+            <li><a href="#">Oprah Service Levels</a></li>
+            <li><a href="#">Cookie Notice</a></li>
+            <li><a href="#">Consent for Children</a></li>
+            <li><a href="#">Consent for Adult</a></li>
+          </ul>
+        </div>
+        <div class="contact-info">
+          <div class="location">
+            <img
+              src="../images/location.png"
+              width="25"
+              height="25"
+              alt="Location Icon"
+            />
+            <p>Yaoundé, Cameroon</p>
+          </div>
+          <div class="phone">
+            <img
+              src="../images/phone.png"
+              width="25"
+              height="25"
+              alt="Phone Icon"
+            />
+            <p>+237 679 724 561</p>
+          </div>
+          <div class="email">
+            <img
+              src="../images/mail.png"
+              id="email"
+              width="25"
+              height="25"
+              alt="Email Icon"
+            />
+            <p>oprahhealth@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="#"
+          ><img
+            src="../images/instagram.png"
+            width="25"
+            height="25"
+            alt="Instagram"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/linkedin.png"
+            width="25"
+            height="25"
+            alt="LinkedIn"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/twitter.png"
+            width="25"
+            height="25"
+            alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/youtube.png"
+            width="25"
+            height="25"
+            alt="YouTube"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/facebook.png"
+            width="25"
+            height="25"
+            alt="Facebook"
+        /></a>
+      </div>
+      <p class="copyright">&copy; 2025 Oprah. All Rights Reserved.</p>
+    </footer>
 
     <script src="../swiperjs/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // MOBILE MENU
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector(".nav");
+        if (hamburger && nav) {
+          const overlay = document.createElement("div");
+          overlay.className = "nav-overlay";
+          document.body.appendChild(overlay);
+
+          const toggleMenu = () => {
+            hamburger.classList.toggle("open");
+            nav.classList.toggle("open");
+            overlay.classList.toggle("visible");
+          };
+
+          hamburger.addEventListener("click", toggleMenu);
+          overlay.addEventListener("click", toggleMenu);
+
+          // Only close for “real” nav links, not the dropdown toggle/items
+          nav.querySelectorAll("a").forEach((link) => {
+            if (
+              link.classList.contains("dropbtn") ||
+              link.closest(".dropdown-content")
+            )
+              return;
+
+            link.addEventListener("click", () => {
+              if (nav.classList.contains("open")) toggleMenu();
+            });
+          });
+        }
+      });
+    </script>
+
+
   </body>
 </html>

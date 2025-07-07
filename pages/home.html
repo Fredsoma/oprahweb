@@ -7,21 +7,35 @@
     <!-- Favicon -->
     <link href="../images/Oprah.png" rel="icon" />
     <!-- Swiper CSS-->
-    <link rel="stylesheet" href="../swiperjs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../swiperjs/swiper-bundle.min.css" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="../assets/fontawesome/CSS/all.css">
+    <link rel="stylesheet" href="../assets/fontawesome/CSS/all.css" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="../styles/home.css" />
   </head>
   <body>
-
     <!-- HEADER SECTION -->
     <header class="header">
       <div class="header-top container">
-        <img class="logo" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
+        <img
+          class="logo"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
+
+        <!-- hamburger for mobile -->
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- navigation -->
         <nav class="nav">
           <div class="dropdown">
-            <a href="#" class="dropbtn" onclick="toggleDropdown()">
+            <a href="#" class="dropbtn" onclick="toggleDropdown(event)">
               Products <i class="fa-solid fa-chevron-down"></i>
             </a>
             <div id="myDropdown" class="dropdown-content">
@@ -30,11 +44,10 @@
               <a href="#">Option 3</a>
             </div>
           </div>
-          <!-- Navigation Links for Other Pages -->
           <a href="about.html">About</a>
           <a href="blog.html">Blog</a>
           <a href="careers.html">Careers</a>
-          <a class="contact" href="contact.html">Contact Us</a>
+          <a class="contact" id="cont" href="contact.html">Contact Us</a>
           <div class="language-switcher">
             <div class="language-option" data-lang="en">
               <img src="../images/anglais.jpeg" alt="English" />
@@ -46,16 +59,17 @@
             </div>
           </div>
         </nav>
-       
-        
       </div>
       <div class="header-content container">
         <div class="header-text">
           <h1>The #1 Healthcare Provider in Africa</h1>
           <p>
-            We provide dynamic digital tools and empower healthcare providers and decision makers to improve everyday lives.
+            We provide dynamic digital tools and empower healthcare providers
+            and decision makers to improve everyday lives.
           </p>
-          <a href="#" class="btn-find">Find Out More <i class="fa-solid fa-chevron-right"></i></a>
+          <a href="#" class="btn-find"
+            >Find Out More <i class="fa-solid fa-chevron-right"></i
+          ></a>
         </div>
       </div>
     </header>
@@ -64,12 +78,15 @@
     <section class="partner">
       <div class="partner-text">
         <p>
-          Clinicians, governments, and public health stakeholders across Africa rely on Oprah’s Health technology and insights to elevate standards across the continuum of healthcare delivery, enabling African families to lead happier and healthier lives.
+          Clinicians, governments, and public health stakeholders across Africa
+          rely on Oprah’s Health technology and insights to elevate standards
+          across the continuum of healthcare delivery, enabling African families
+          to lead happier and healthier lives.
         </p>
         <button class="btn-partner">Become a Partner</button>
       </div>
       <div class="partner-img"></div>
-  </section>
+    </section>
 
     <!-- SERVICES SECTION -->
     <main class="services container">
@@ -81,7 +98,9 @@
           <div class="service-info">
             <h3>Our Provider Digitization Suite</h3>
             <p>
-              <strong>OprahSys</strong> operates behind the scenes to simplify care provision while <strong>My Oprah</strong> enables seamless provider-patient interactions.
+              <strong>OprahSys</strong> operates behind the scenes to simplify
+              care provision while <strong>My Oprah</strong> enables seamless
+              provider-patient interactions.
             </p>
             <div class="stats">
               <div>
@@ -98,8 +117,12 @@
               </div>
             </div>
             <div class="learn-more">
-              <a class="btn-learn" href="oprahsys.html">Learn More about OprahSys</a>
-              <a class="btn-learn" href="myoprah.html">Learn More about My Oprah</a>
+              <a class="btn-learn" href="oprahsys.html"
+                >Learn More about OprahSys</a
+              >
+              <a class="btn-learn" href="myoprah.html"
+                >Learn More about My Oprah</a
+              >
             </div>
           </div>
         </article>
@@ -109,7 +132,9 @@
           <div class="service-info">
             <h3>OprahCare</h3>
             <p>
-              Our insurance solution connects employers and healthcare providers, ensuring quality care through reputable clinics and hospitals.
+              Our insurance solution connects employers and healthcare
+              providers, ensuring quality care through reputable clinics and
+              hospitals.
             </p>
             <div class="stats">
               <div>
@@ -134,7 +159,8 @@
           <div class="service-info">
             <h3>Public Health &amp; Data Partnerships</h3>
             <p>
-              We partner with global health organizations and governments to support effective strategies and improve healthcare outcomes.
+              We partner with global health organizations and governments to
+              support effective strategies and improve healthcare outcomes.
             </p>
             <a class="btn-learn" href="#">More on Public Health and Data</a>
           </div>
@@ -143,14 +169,15 @@
     </main>
 
     <!-- Solution Section -->
-  <section class="solution">
-    <div class="solution-img"></div>
-    <div class="solution-text">
-      <p>
-        We equip community medical centers with everything they need to keep their patients healthy.
-      </p>
-    </div>
-  </section>
+    <section class="solution">
+      <div class="solution-img"></div>
+      <div class="solution-text">
+        <p>
+          We equip community medical centers with everything they need to keep
+          their patients healthy.
+        </p>
+      </div>
+    </section>
 
     <!-- TESTIMONIALS SECTION  -->
     <section class="testimonials container">
@@ -158,90 +185,124 @@
       <div class="testimonial-cards">
         <div class="testimonial-card">
           <p>
-            "Thanks to this platform, we streamlined our clinic's operations and improved patient satisfaction dramatically!"
+            "Thanks to this platform, we streamlined our clinic's operations and
+            improved patient satisfaction dramatically!"
           </p>
           <span class="testimonial-author">– Dr. Amina, Clinic Director</span>
         </div>
         <div class="testimonial-card">
           <p>
-            "The digital tools provided are intuitive and have truly transformed our healthcare delivery process."
+            "The digital tools provided are intuitive and have truly transformed
+            our healthcare delivery process."
           </p>
-          <span class="testimonial-author">– Mr. John, Health Administrator</span>
+          <span class="testimonial-author"
+            >– Mr. John, Health Administrator</span
+          >
         </div>
       </div>
     </section>
 
     <!-- About Us Preview Section -->
-<section class="about-preview-section container">
-  <div class="about-preview-grid">
-    <!-- Left column: Image -->
-    <div class="about-image">
-      <img src="../images/health2.jpeg" alt="Our Team" />
-    </div>
-    <!-- Right column: Detailed text -->
-    <div class="about-text">
-      <h2>About Us</h2>
-      <p>
-        At Oprah, we believe in transforming healthcare through innovation. Our journey began with a vision to bridge the gap between patients and providers using cutting-edge digital tools. We’re passionate about empowering health facilities, improving patient outcomes, and enabling seamless care delivery.
-      </p>
-      <p>
-        Learn about our mission, our experienced team, and how we continue to revolutionize healthcare technology across Africa.
-      </p>
-      <a href="about.html" class="btn-preview">See More</a>
-    </div>
-  </div>
-</section>
+    <section class="about-home container" id="about-home">
+      <!-- floating bubbles -->
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+
+      <div class="about-content">
+        <!-- Left column: Image -->
+        <div class="about-text">
+          <h3 class="preTitle">About Us</h3>
+          <h2 class="title">Transforming Healthcare Across Africa</h2>
+          <p class="text">
+            At Oprah, we believe in transforming healthcare through innovation.
+            Our journey began with a vision to bridge the gap between patients
+            and providers using cutting‑edge digital tools. We’re passionate
+            about empowering health facilities, improving patient outcomes, and
+            enabling seamless care delivery.
+          </p>
+          <p class="text">
+            Learn about our mission, our experienced team, and how we continue
+            to revolutionize healthcare technology across Africa.
+          </p>
+          <a href="about.html" class="cta btn-preview">See More</a>
+        </div>
+        <!-- Right column: Detailed text -->
+        <div class="about-image">
+          <img src="../images/about.png" alt="Our Team" />
+        </div>
+      </div>
+    </section>
 
     <!-- BLOG PREVIEW SECTION -->
     <section class="preview-section container blog-preview">
       <h2 class="section-title">Our Blog</h2>
-      <p>Stay informed on the latest trends and insights in digital healthcare.</p>
-    
+      <p>
+        Stay informed on the latest trends and insights in digital healthcare.
+      </p>
+
       <div class="blog-cards">
         <article class="blog-card">
-          <img src="../images/medical3.jpeg" alt="Blog thumbnail" />
+          <img src="../images/world.jpg" alt="Blog thumbnail" />
           <div class="blog-content">
             <h3>Digital Tools Transforming Care</h3>
-            <p>Explore how digital platforms like OprahSys are reshaping clinics across Africa...</p>
+            <p>
+              Explore how digital platforms like OprahSys are reshaping clinics
+              across Africa...
+            </p>
             <a href="#" class="btn-learn">Read More</a>
           </div>
         </article>
-    
+
         <article class="blog-card">
-          <img src="../images/health.jpeg" alt="Blog thumbnail" />
+          <img src="../images/virus.jpg" alt="Blog thumbnail" />
           <div class="blog-content">
             <h3>Building Trust Through Data</h3>
-            <p>Data partnerships with ministries are enhancing decision-making and health outcomes...</p>
+            <p>
+              Data partnerships with ministries are enhancing decision-making
+              and health outcomes...
+            </p>
             <a href="#" class="btn-learn">Read More</a>
           </div>
         </article>
       </div>
-    
+
       <a href="blog.html" class="btn-preview">See All Blogs</a>
     </section>
-    
 
     <!-- CAREERS PREVIEW SECTION -->
-    <section class="preview-section container careers-preview">
-      <div class="career-preview-grid">
-        <!-- Left Column: Engaging image for Careers -->
-        <div class="career-image">
-          <img src="../images/medical2.jpeg" alt="Join Our Team" />
-        </div>
-        <!-- Right Column: Detailed text -->
+    <section id="careers-home" class="preview-section container careers-home">
+      <!-- floating bubbles -->
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+
+      <div class="careers-content">
+        <!-- Left Column: Image -->
         <div class="career-text">
-          <h2>Careers</h2>
-          <p>
-            Are you ready to revolutionize healthcare? At Oprah, we’re looking for passionate professionals who are eager to make a difference. Join our dynamic team and help transform the medical landscape—your expertise could empower healthcare providers and improve patient outcomes across Africa.
+          <h3 class="preTitle">Careers</h3>
+          <h2 class="title">Join Our Mission</h2>
+          <p class="text">
+            Are you ready to revolutionize healthcare? At Oprah, we’re looking
+            for passionate professionals who are eager to make a difference.
+            Join our dynamic team and help transform the medical landscape— your
+            expertise could empower healthcare providers and improve patient
+            outcomes across Africa.
           </p>
-          <p>
-            Explore our open positions and see how you can be a part of this journey.
+          <p class="text">
+            Explore our open positions and see how you can be a part of this
+            journey.
           </p>
-          <a href="careers.html" class="btn-preview">See More</a>
+          <a href="careers.html" class="cta btn-preview">See More</a>
+        </div>
+
+        <!-- Right Column: Text -->
+
+        <div class="career-image imageWrapper">
+          <img src="../images/career.png" alt="Join Our Team" class="image" />
         </div>
       </div>
     </section>
-    
 
     <!-- CONTACT TEASER SECTION-->
     <section class="contact-teaser container">
@@ -251,58 +312,82 @@
     </section>
 
     <!-- SLIDER SECTION -->
-    <section class="slider container">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image: url('../images/1.png');">
-            <div class="slide-overlay">
-              <h3>Empowering Providers</h3>
-              <p>Seamless operations at your fingertips.</p>
+    <center>
+      <section class="slider container">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              style="background-image: url('../images/1.png')"
+            >
+              <div class="slide-overlay">
+                <h3>Empowering Providers</h3>
+                <p>Seamless operations at your fingertips.</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="background-image: url('../images/2.jpg')"
+            >
+              <div class="slide-overlay">
+                <h3>Patient-Centric Care</h3>
+                <p>Improving outcomes with digital solutions.</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="background-image: url('../images/3.jpg')"
+            >
+              <div class="slide-overlay">
+                <h3>Data-Driven Decisions</h3>
+                <p>Insightful analytics for better care.</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="background-image: url('../images/4.jpg')"
+            >
+              <div class="slide-overlay">
+                <h3>Innovative Solutions</h3>
+                <p>Transforming healthcare delivery.</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="background-image: url('../images/5.jpg')"
+            >
+              <div class="slide-overlay">
+                <h3>24/7 Connectivity</h3>
+                <p>Always connected for urgent care.</p>
+              </div>
+            </div>
+            <div
+              class="swiper-slide"
+              style="background-image: url('../images/6.jpg')"
+            >
+              <div class="slide-overlay">
+                <h3>Future-Ready</h3>
+                <p>Leading the way in healthcare digitalization.</p>
+              </div>
             </div>
           </div>
-          <div class="swiper-slide" style="background-image: url('../images/2.jpg');">
-            <div class="slide-overlay">
-              <h3>Patient-Centric Care</h3>
-              <p>Improving outcomes with digital solutions.</p>
-            </div>
-          </div>
-          <div class="swiper-slide" style="background-image: url('../images/3.jpg');">
-            <div class="slide-overlay">
-              <h3>Data-Driven Decisions</h3>
-              <p>Insightful analytics for better care.</p>
-            </div>
-          </div>
-          <div class="swiper-slide" style="background-image: url('../images/4.jpg');">
-            <div class="slide-overlay">
-              <h3>Innovative Solutions</h3>
-              <p>Transforming healthcare delivery.</p>
-            </div>
-          </div>
-          <div class="swiper-slide" style="background-image: url('../images/5.jpg');">
-            <div class="slide-overlay">
-              <h3>24/7 Connectivity</h3>
-              <p>Always connected for urgent care.</p>
-            </div>
-          </div>
-          <div class="swiper-slide" style="background-image: url('../images/6.jpg');">
-            <div class="slide-overlay">
-              <h3>Future-Ready</h3>
-              <p>Leading the way in healthcare digitalization.</p>
-            </div>
-          </div>
+          <!-- new: pagination bullets -->
+          <div class="swiper-pagination"></div>
         </div>
-        <!-- Navigation Buttons -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </section>
+      </section>
+    </center>
 
-
-    
     <!-- FOOTER SECTION -->
     <footer class="footer container">
       <div class="footer-logo">
-        <img class="logo" id="logo1" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
+        <img
+          class="logo"
+          id="logo1"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
         <p class="footertxt">Understand, Track and Improve Your Health</p>
         <div class="download-links">
           <a href="#" class="store-link">
@@ -310,7 +395,12 @@
             <span>Download on the App Store</span>
           </a>
           <a href="#" class="store-link">
-            <img src="../images/playstore.png" width="49" height="49" alt="Google Play" />
+            <img
+              src="../images/playstore.png"
+              width="49"
+              height="49"
+              alt="Google Play"
+            />
             <span>Get it on Google Play</span>
           </a>
         </div>
@@ -340,85 +430,211 @@
         </div>
         <div class="contact-info">
           <div class="location">
-            <img src="../images/location.png" width="25" height="25" alt="Location Icon" />
+            <img
+              src="../images/location.png"
+              width="25"
+              height="25"
+              alt="Location Icon"
+            />
             <p>Yaoundé, Cameroon</p>
           </div>
           <div class="phone">
-            <img src="../images/phone.png" width="25" height="25" alt="Phone Icon" />
+            <img
+              src="../images/phone.png"
+              width="25"
+              height="25"
+              alt="Phone Icon"
+            />
             <p>+237 679 724 561</p>
           </div>
           <div class="email">
-            <img src="../images/mail.png" id="email" width="25" height="25" alt="Email Icon" />
+            <img
+              src="../images/mail.png"
+              id="email"
+              width="25"
+              height="25"
+              alt="Email Icon"
+            />
             <p>oprahhealth@gmail.com</p>
           </div>
         </div>
       </div>
       <div class="footer-social">
-        <a href="#"><img src="../images/instagram.png" width="25" height="25" alt="Instagram" /></a>
-        <a href="#"><img src="../images/linkedin.png" width="25" height="25" alt="LinkedIn" /></a>
-        <a href="#"><img src="../images/twitter.png" width="25" height="25" alt="Twitter" /></a>
-        <a href="#"><img src="../images/youtube.png" width="25" height="25" alt="YouTube" /></a>
-        <a href="#"><img src="../images/facebook.png" width="25" height="25" alt="Facebook" /></a>
+        <a href="#"
+          ><img
+            src="../images/instagram.png"
+            width="25"
+            height="25"
+            alt="Instagram"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/linkedin.png"
+            width="25"
+            height="25"
+            alt="LinkedIn"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/twitter.png"
+            width="25"
+            height="25"
+            alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/youtube.png"
+            width="25"
+            height="25"
+            alt="YouTube"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/facebook.png"
+            width="25"
+            height="25"
+            alt="Facebook"
+        /></a>
       </div>
-      <p class="copyright">&copy; 2025 Oprah. All Rights Reserved.</p>
+      <p class="copyright">&copy; 2025 Oprah. All Rights Reserved. ·<a
+            href="https://fredsoma.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class= devLink
+          >
+           Developed by Fred Soma
+          </a></p>
     </footer>
-  
 
     <!-- Swiper JS -->
     <script src="../swiperjs/swiper-bundle.min.js"></script>
     <script>
-      // Dropdown toggle
-      function toggleDropdown() {
+      // Dropdown toggle (stops propagation)
+      function toggleDropdown(e) {
+        e.preventDefault();
+        e.stopPropagation();
         document.getElementById("myDropdown").classList.toggle("show");
       }
+
       // Initialize Swiper
       var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        centeredSlides: true,
-        spaceBetween: 700,
+        slidesPerView: 1, // exactly one slide per “page”
+        centeredSlides: false, // disable centering
+        spaceBetween: 0, // no gap between slides
         loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
+
+        speed: 500,
         autoplay: {
-          delay: 3000,
+          delay: 1000,
           disableOnInteraction: false,
         },
       });
+    </script>
 
-      // Dark mode toggle using localStorage
-      const darkModeToggle = document.getElementById("darkModeToggle");
-      function enableDarkMode() {
-        document.documentElement.setAttribute("data-theme", "dark");
-        localStorage.setItem("theme", "dark");
-        darkModeToggle.textContent = "Light Mode";
-      }
-      function disableDarkMode() {
-        document.documentElement.setAttribute("data-theme", "light");
-        localStorage.setItem("theme", "light");
-        darkModeToggle.textContent = "Dark Mode";
-      }
-      darkModeToggle.addEventListener("click", () => {
-        if (document.documentElement.getAttribute("data-theme") === "dark") {
-          disableDarkMode();
-        } else {
+    <!-- Mobile nav toggle script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // MOBILE MENU
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector(".nav");
+        if (hamburger && nav) {
+          const overlay = document.createElement("div");
+          overlay.className = "nav-overlay";
+          document.body.appendChild(overlay);
+
+          const toggleMenu = () => {
+            hamburger.classList.toggle("open");
+            nav.classList.toggle("open");
+            overlay.classList.toggle("visible");
+          };
+
+          hamburger.addEventListener("click", toggleMenu);
+          overlay.addEventListener("click", toggleMenu);
+
+          // Only close for “real” nav links, not the dropdown toggle/items
+          nav.querySelectorAll("a").forEach((link) => {
+            if (
+              link.classList.contains("dropbtn") ||
+              link.closest(".dropdown-content")
+            )
+              return;
+
+            link.addEventListener("click", () => {
+              if (nav.classList.contains("open")) toggleMenu();
+            });
+          });
+        }
+        // DARK MODE
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        function enableDarkMode() {
+          document.documentElement.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+          if (darkModeToggle) darkModeToggle.textContent = "Light Mode";
+        }
+        function disableDarkMode() {
+          document.documentElement.setAttribute("data-theme", "light");
+          localStorage.setItem("theme", "light");
+          if (darkModeToggle) darkModeToggle.textContent = "Dark Mode";
+        }
+        if (darkModeToggle) {
+          darkModeToggle.addEventListener("click", () => {
+            document.documentElement.getAttribute("data-theme") === "dark"
+              ? disableDarkMode()
+              : enableDarkMode();
+          });
+        }
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+          if (darkModeToggle) {
+            darkModeToggle.textContent =
+              savedTheme === "dark" ? "Light Mode" : "Dark Mode";
+          }
+        } else if (
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
           enableDarkMode();
+        } else {
+          disableDarkMode();
         }
       });
-      // Initialize theme based on saved preference or system
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) {
-        document.documentElement.setAttribute("data-theme", savedTheme);
-        darkModeToggle.textContent = savedTheme === "dark" ? "Light Mode" : "Dark Mode";
-      } else if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        enableDarkMode();
-      } else {
-        disableDarkMode();
-      }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const aboutSection = document.getElementById("about-home");
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              aboutSection.classList.add("visible");
+              observer.unobserve(aboutSection);
+            }
+          },
+          { threshold: 0.3 }
+        );
+        observer.observe(aboutSection);
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const careers = document.getElementById("careers-home");
+        const obs = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              careers.classList.add("visible");
+              obs.unobserve(careers);
+            }
+          },
+          { threshold: 0.3 }
+        );
+        obs.observe(careers);
+      });
     </script>
   </body>
 </html>

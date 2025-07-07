@@ -8,35 +8,50 @@
     <link rel="stylesheet" href="../styles/contact.css" />
 
     <!-- Include EmailJS Library -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
-      (function(){
+      (function () {
         emailjs.init("OS_DgdTdYnwHf-c-4"); // Replace with your actual EmailJS Public Key
       })();
     </script>
-    
   </head>
   <body>
-     <!-- HEADER SECTION -->
-   <header class="header">
-    <div class="header-top container">
-      <img class="logo" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
-      <nav class="nav">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="careers.html" class="contact">Careers</a>
-      </nav>
-    </div>
-    <div class="hero container">
-      <!-- Full-width hero with overlay --> 
-      <div class="hero-overlay">
-        <h1>Contact Us</h1>
-        <p>Have a question or need support? We're here to help.</p>
-      </div>
-    </div>
-  </header>
+    <!-- HEADER SECTION -->
+    <header class="header">
+      <div class="header-top container">
+        <img
+          class="logo"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
+         <!-- hamburger for mobile -->
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
+        <!-- navigation -->
+        <nav class="nav">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="blog.html">Blog</a>
+          <a class="contact" id="cont" href="careers.html">Careers</a>
+        </nav>
+      </div>
+      <div class="hero container">
+        <!-- Full-width hero with overlay -->
+        <div class="hero-overlay">
+          <h1>Contact Us</h1>
+          <p>Have a question or need support? We're here to help.</p>
+        </div>
+      </div>
+    </header>
 
     <!-- MAIN CONTENT -->
     <main class="container">
@@ -46,16 +61,33 @@
         <form id="contact-form" class="contact-form">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com"
-              required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" placeholder="Your message here..." required></textarea>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Your message here..."
+              required
+            ></textarea>
           </div>
           <input type="hidden" name="title" value="Contact Request" />
           <button type="submit" class="btn-submit">Send Message</button>
@@ -73,7 +105,8 @@
           scrolling="no"
           marginheight="0"
           marginwidth="0"
-          src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=glacier%20italien%20cradat,%20yaounde%20,%20cameroon+(infinity%20studio)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+          src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=glacier%20italien%20cradat,%20yaounde%20,%20cameroon+(infinity%20studio)&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+        >
           <a href="https://www.maps.ie/population/">Find Population on Map</a>
         </iframe>
       </section>
@@ -90,7 +123,13 @@
     <!-- FOOTER SECTION -->
     <footer class="footer container">
       <div class="footer-logo">
-        <img class="logo" id="logo1" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
+        <img
+          class="logo"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
         <p class="footertxt">Understand, Track and Improve Your Health</p>
         <div class="download-links">
           <a href="#" class="store-link">
@@ -98,7 +137,12 @@
             <span>Download on the App Store</span>
           </a>
           <a href="#" class="store-link">
-            <img src="../images/playstore.png" width="49" height="49" alt="Google Play" />
+            <img
+              src="../images/playstore.png"
+              width="49"
+              height="49"
+              alt="Google Play"
+            />
             <span>Get it on Google Play</span>
           </a>
         </div>
@@ -128,62 +172,147 @@
         </div>
         <div class="contact-info">
           <div class="location">
-            <img src="../images/location.png" width="25" height="25" alt="Location Icon" />
+            <img
+              src="../images/location.png"
+              width="25"
+              height="25"
+              alt="Location Icon"
+            />
             <p>Yaoundé, Cameroon</p>
           </div>
           <div class="phone">
-            <img src="../images/phone.png" width="25" height="25" alt="Phone Icon" />
+            <img
+              src="../images/phone.png"
+              width="25"
+              height="25"
+              alt="Phone Icon"
+            />
             <p>+237 679 724 561</p>
           </div>
           <div class="email">
-            <img src="../images/mail.png" id="email" width="25" height="25" alt="Email Icon" />
+            <img
+              src="../images/mail.png"
+              id="email"
+              width="25"
+              height="25"
+              alt="Email Icon"
+            />
             <p>oprahhealth@gmail.com</p>
           </div>
         </div>
       </div>
       <div class="footer-social">
-        <a href="#"><img src="../images/instagram.png" width="25" height="25" alt="Instagram" /></a>
-        <a href="#"><img src="../images/linkedin.png" width="25" height="25" alt="LinkedIn" /></a>
-        <a href="#"><img src="../images/twitter.png" width="25" height="25" alt="Twitter" /></a>
-        <a href="#"><img src="../images/youtube.png" width="25" height="25" alt="YouTube" /></a>
-        <a href="#"><img src="../images/facebook.png" width="25" height="25" alt="Facebook" /></a>
+        <a href="#"
+          ><img
+            src="../images/instagram.png"
+            width="25"
+            height="25"
+            alt="Instagram"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/linkedin.png"
+            width="25"
+            height="25"
+            alt="LinkedIn"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/twitter.png"
+            width="25"
+            height="25"
+            alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/youtube.png"
+            width="25"
+            height="25"
+            alt="YouTube"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/facebook.png"
+            width="25"
+            height="25"
+            alt="Facebook"
+        /></a>
       </div>
       <p class="copyright">&copy; 2025 Oprah. All Rights Reserved.</p>
     </footer>
 
     <!-- EmailJS Form Submission Script with Loading Spinner, Toast Notification, and Form Reset -->
     <script>
-      document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent the default form submission
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Prevent the default form submission
 
-        // Show loading spinner
-        var spinner = document.getElementById('spinner');
-        spinner.classList.add('show');
+          // Show loading spinner
+          var spinner = document.getElementById("spinner");
+          spinner.classList.add("show");
 
-        // Send form via EmailJS
-        emailjs.sendForm("service_4mbywvc", "template_ft82dax", this)
-          .then(function() {
-            // Hide spinner
-            spinner.classList.remove('show');
+          // Send form via EmailJS
+          emailjs.sendForm("service_4mbywvc", "template_ft82dax", this).then(
+            function () {
+              // Hide spinner
+              spinner.classList.remove("show");
 
-            // Show toast notification
-            var toast = document.getElementById('toast');
-            toast.classList.add('show');
+              // Show toast notification
+              var toast = document.getElementById("toast");
+              toast.classList.add("show");
 
-            // Clear the form fields after submission
-            document.getElementById('contact-form').reset();
+              // Clear the form fields after submission
+              document.getElementById("contact-form").reset();
 
-            // Hide the toast after 3 seconds
-            setTimeout(function() {
-              toast.classList.remove('show');
-            }, 3000);
-          }, function(error) {
-            // Hide spinner on error as well
-            spinner.classList.remove('show');
-            alert('Failed to send message. Please try again later.');
-            console.error('EmailJS error:', error);
+              // Hide the toast after 3 seconds
+              setTimeout(function () {
+                toast.classList.remove("show");
+              }, 3000);
+            },
+            function (error) {
+              // Hide spinner on error as well
+              spinner.classList.remove("show");
+              alert("Failed to send message. Please try again later.");
+              console.error("EmailJS error:", error);
+            }
+          );
+        });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // MOBILE MENU
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector(".nav");
+        if (hamburger && nav) {
+          const overlay = document.createElement("div");
+          overlay.className = "nav-overlay";
+          document.body.appendChild(overlay);
+
+          const toggleMenu = () => {
+            hamburger.classList.toggle("open");
+            nav.classList.toggle("open");
+            overlay.classList.toggle("visible");
+          };
+
+          hamburger.addEventListener("click", toggleMenu);
+          overlay.addEventListener("click", toggleMenu);
+
+          // Only close for “real” nav links, not the dropdown toggle/items
+          nav.querySelectorAll("a").forEach((link) => {
+            if (
+              link.classList.contains("dropbtn") ||
+              link.closest(".dropdown-content")
+            )
+              return;
+
+            link.addEventListener("click", () => {
+              if (nav.classList.contains("open")) toggleMenu();
+            });
           });
+        }
       });
     </script>
+
   </body>
 </html>

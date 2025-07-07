@@ -14,16 +14,30 @@
     <!-- HEADER SECTION -->
     <header class="header">
       <div class="header-top container">
-        <img class="logo" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
+        <img
+          class="logo"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
+         <!-- hamburger for mobile -->
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- navigation -->
         <nav class="nav">
           <a href="home.html">Home</a>
           <a href="blog.html">Blog</a>
           <a href="careers.html">Careers</a>
-          <a href="contact.html" class="contact">Contact Us</a>
+          <a class="contact" id="cont" href="contact.html">Contact Us</a>
         </nav>
       </div>
       <div class="hero container">
-        <!-- Full-width hero with overlay --> 
+        <!-- Full-width hero with overlay -->
         <div class="hero-overlay">
           <h1>About Oprah</h1>
           <p>Revolutionizing healthcare with digital innovation</p>
@@ -34,19 +48,35 @@
     <!-- MAIN CONTENT -->
     <main class="container">
       <!-- Our Story Section -->
-      <section class="our-story">
-        <div class="story-grid">
-          <div class="story-image">
-            <img src="../images/medical3.jpeg" alt="Our Journey" />
+      <section class="about-home container" id="about-home">
+        <!-- floating bubbles -->
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="about-content">
+          <!-- Left column: Image -->
+          <div class="about-text">
+            <h2 class="title">Our Journey</h2>
+            <p class="text">
+              Oprah was born from a passion to transform the healthcare
+              landscape across Africa. In a continent where medical facilities
+              often struggle with outdated processes, our founders envisioned a
+              world where technology bridges the gap—making healthcare faster,
+              more efficient, and accessible. From humble beginnings in a local
+              clinic to partnering with international technology leaders, our
+              journey has been one of relentless innovation and unwavering
+              commitment.
+            </p>
+            <p class="text">
+              Today, we are proud to empower thousands of healthcare
+              professionals, digitize medical records, and improve patient
+              outcomes through cutting-edge solutions. Our story is a testament
+              to the power of vision and perseverance.
+            </p>
           </div>
-          <div class="story-text">
-            <h2>Our Journey</h2>
-            <p>
-              Oprah was born from a passion to transform the healthcare landscape across Africa. In a continent where medical facilities often struggle with outdated processes, our founders envisioned a world where technology bridges the gap—making healthcare faster, more efficient, and accessible. From humble beginnings in a local clinic to partnering with international technology leaders, our journey has been one of relentless innovation and unwavering commitment.
-            </p>
-            <p>
-              Today, we are proud to empower thousands of healthcare professionals, digitize medical records, and improve patient outcomes through cutting-edge solutions. Our story is a testament to the power of vision and perseverance.
-            </p>
+          <!-- Right column: Detailed text -->
+          <div class="about-image">
+            <img src="../images/about.png" alt="Our Team" />
           </div>
         </div>
       </section>
@@ -56,13 +86,17 @@
         <div class="mission">
           <h3>Our Mission</h3>
           <p>
-            To revolutionize healthcare delivery by providing state-of-the-art digital solutions that enhance efficiency, foster connectivity, and ensure that every patient receives the best possible care.
+            To revolutionize healthcare delivery by providing state-of-the-art
+            digital solutions that enhance efficiency, foster connectivity, and
+            ensure that every patient receives the best possible care.
           </p>
         </div>
         <div class="vision">
           <h3>Our Vision</h3>
           <p>
-            To create a healthier Africa where healthcare is powered by innovation, collaboration, and sustainable technology—making digital care a universal reality.
+            To create a healthier Africa where healthcare is powered by
+            innovation, collaboration, and sustainable technology—making digital
+            care a universal reality.
           </p>
         </div>
       </section>
@@ -86,7 +120,6 @@
             <h4>Lisa Ray</h4>
             <p>Chief Operations Officer</p>
           </div>
-          
         </div>
       </section>
     </main>
@@ -94,7 +127,13 @@
     <!-- FOOTER SECTION -->
     <footer class="footer container">
       <div class="footer-logo">
-        <img class="logo" id="logo1" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
+        <img
+          class="logo"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
         <p class="footertxt">Understand, Track and Improve Your Health</p>
         <div class="download-links">
           <a href="#" class="store-link">
@@ -102,7 +141,12 @@
             <span>Download on the App Store</span>
           </a>
           <a href="#" class="store-link">
-            <img src="../images/playstore.png" width="49" height="49" alt="Google Play" />
+            <img
+              src="../images/playstore.png"
+              width="49"
+              height="49"
+              alt="Google Play"
+            />
             <span>Get it on Google Play</span>
           </a>
         </div>
@@ -132,27 +176,125 @@
         </div>
         <div class="contact-info">
           <div class="location">
-            <img src="../images/location.png" width="25" height="25" alt="Location Icon" />
+            <img
+              src="../images/location.png"
+              width="25"
+              height="25"
+              alt="Location Icon"
+            />
             <p>Yaoundé, Cameroon</p>
           </div>
           <div class="phone">
-            <img src="../images/phone.png" width="25" height="25" alt="Phone Icon" />
+            <img
+              src="../images/phone.png"
+              width="25"
+              height="25"
+              alt="Phone Icon"
+            />
             <p>+237 679 724 561</p>
           </div>
           <div class="email">
-            <img src="../images/mail.png" id="email" width="25" height="25" alt="Email Icon" />
+            <img
+              src="../images/mail.png"
+              id="email"
+              width="25"
+              height="25"
+              alt="Email Icon"
+            />
             <p>oprahhealth@gmail.com</p>
           </div>
         </div>
       </div>
       <div class="footer-social">
-        <a href="#"><img src="../images/instagram.png" width="25" height="25" alt="Instagram" /></a>
-        <a href="#"><img src="../images/linkedin.png" width="25" height="25" alt="LinkedIn" /></a>
-        <a href="#"><img src="../images/twitter.png" width="25" height="25" alt="Twitter" /></a>
-        <a href="#"><img src="../images/youtube.png" width="25" height="25" alt="YouTube" /></a>
-        <a href="#"><img src="../images/facebook.png" width="25" height="25" alt="Facebook" /></a>
+        <a href="#"
+          ><img
+            src="../images/instagram.png"
+            width="25"
+            height="25"
+            alt="Instagram"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/linkedin.png"
+            width="25"
+            height="25"
+            alt="LinkedIn"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/twitter.png"
+            width="25"
+            height="25"
+            alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/youtube.png"
+            width="25"
+            height="25"
+            alt="YouTube"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/facebook.png"
+            width="25"
+            height="25"
+            alt="Facebook"
+        /></a>
       </div>
       <p class="copyright">&copy; 2025 Oprah. All Rights Reserved.</p>
     </footer>
+
+     <!-- Mobile nav toggle script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // MOBILE MENU
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector(".nav");
+        if (hamburger && nav) {
+          const overlay = document.createElement("div");
+          overlay.className = "nav-overlay";
+          document.body.appendChild(overlay);
+
+          const toggleMenu = () => {
+            hamburger.classList.toggle("open");
+            nav.classList.toggle("open");
+            overlay.classList.toggle("visible");
+          };
+
+          hamburger.addEventListener("click", toggleMenu);
+          overlay.addEventListener("click", toggleMenu);
+
+          // Only close for “real” nav links, not the dropdown toggle/items
+          nav.querySelectorAll("a").forEach((link) => {
+            if (
+              link.classList.contains("dropbtn") ||
+              link.closest(".dropdown-content")
+            )
+              return;
+
+            link.addEventListener("click", () => {
+              if (nav.classList.contains("open")) toggleMenu();
+            });
+          });
+        }
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const aboutSection = document.getElementById("about-home");
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              aboutSection.classList.add("visible");
+              observer.unobserve(aboutSection);
+            }
+          },
+          { threshold: 0.3 }
+        );
+        observer.observe(aboutSection);
+      });
+    </script>
   </body>
 </html>

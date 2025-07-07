@@ -7,63 +7,115 @@
     <link href="../images/Oprah.png" rel="icon" />
     <link rel="stylesheet" href="../styles/jobcareer.css" />
 
-     <!-- Include EmailJS Library -->
-     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-     <script type="text/javascript">
-       (function(){
-         emailjs.init("OS_DgdTdYnwHf-c-4"); // Replace with your actual EmailJS Public Key
-       })();
-     </script>
+    <!-- Include EmailJS Library -->
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("OS_DgdTdYnwHf-c-4"); // Replace with your actual EmailJS Public Key
+      })();
+    </script>
 
     <!-- Font Awesome for icons if needed -->
     <link rel="stylesheet" href="../assets/fontawesome/CSS/all.css" />
   </head>
   <body>
-     <!-- HEADER SECTION -->
-   <header class="header">
-    <div class="header-top container">
-      <img class="logo" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
-      <nav class="nav">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html" class="contact">Contact Us</a>
-      </nav>
-    </div>
-    <div class="hero container">
-      <!-- Full-width hero with overlay --> 
-      <div class="hero-overlay">
-        <h1>Software Engineer</h1>
-          <p>Join our team of innovators building cutting-edge digital healthcare solutions.</p>
-      </div>
-    </div>
-  </header>
+    <!-- HEADER SECTION -->
+    <header class="header">
+      <div class="header-top container">
+        <img
+          class="logo"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
+        <!-- hamburger for mobile -->
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
+        <!-- navigation -->
+        <nav class="nav">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="blog.html">Blog</a>
+          <a class="contact" id="cont" href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+      <div class="hero container">
+        <!-- Full-width hero with overlay -->
+        <div class="hero-overlay">
+          <h1>Software Engineer</h1>
+          <p>
+            Join our team of innovators building cutting-edge digital healthcare
+            solutions.
+          </p>
+        </div>
+      </div>
+    </header>
 
     <!-- APPLICATION FORM -->
     <main class="container">
       <section class="application-form-section">
         <h2>Apply Now</h2>
-        <form id="apply-form" class="application-form" enctype="multipart/form-data">
+        <form
+          id="apply-form"
+          class="application-form"
+          enctype="multipart/form-data"
+        >
           <div class="form-group">
             <label for="full-name">Full Name</label>
-            <input type="text" id="full-name" name="fullname" placeholder="Your Full Name" required />
+            <input
+              type="text"
+              id="full-name"
+              name="fullname"
+              placeholder="Your Full Name"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="+1234567890" required />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="+1234567890"
+              required
+            />
           </div>
           <div class="form-group">
             <label for="cover-letter">Cover Letter</label>
-            <textarea id="cover-letter" name="coverletter" rows="6" placeholder="Write your cover letter here..." required></textarea>
+            <textarea
+              id="cover-letter"
+              name="coverletter"
+              rows="6"
+              placeholder="Write your cover letter here..."
+              required
+            ></textarea>
           </div>
           <div class="form-group">
             <label for="resume">Resume</label>
-            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" />
+            <input
+              type="file"
+              id="resume"
+              name="resume"
+              accept=".pdf,.doc,.docx"
+            />
           </div>
           <button type="submit" class="btn-submit">Submit Application</button>
         </form>
@@ -75,14 +127,19 @@
       <div></div>
     </div>
 
-     <!-- Toast Notification -->
-     <div id="toast" class="toast">Message sent successfully!</div>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Message sent successfully!</div>
 
-
-     <!-- FOOTER SECTION -->
-     <footer class="footer container">
+    <!-- FOOTER SECTION -->
+    <footer class="footer container">
       <div class="footer-logo">
-        <img class="logo" id="logo1" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
+        <img
+          class="logo"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
         <p class="footertxt">Understand, Track and Improve Your Health</p>
         <div class="download-links">
           <a href="#" class="store-link">
@@ -90,7 +147,12 @@
             <span>Download on the App Store</span>
           </a>
           <a href="#" class="store-link">
-            <img src="../images/playstore.png" width="49" height="49" alt="Google Play" />
+            <img
+              src="../images/playstore.png"
+              width="49"
+              height="49"
+              alt="Google Play"
+            />
             <span>Get it on Google Play</span>
           </a>
         </div>
@@ -120,100 +182,189 @@
         </div>
         <div class="contact-info">
           <div class="location">
-            <img src="../images/location.png" width="25" height="25" alt="Location Icon" />
+            <img
+              src="../images/location.png"
+              width="25"
+              height="25"
+              alt="Location Icon"
+            />
             <p>Yaoundé, Cameroon</p>
           </div>
           <div class="phone">
-            <img src="../images/phone.png" width="25" height="25" alt="Phone Icon" />
+            <img
+              src="../images/phone.png"
+              width="25"
+              height="25"
+              alt="Phone Icon"
+            />
             <p>+237 679 724 561</p>
           </div>
           <div class="email">
-            <img src="../images/mail.png" id="email" width="25" height="25" alt="Email Icon" />
+            <img
+              src="../images/mail.png"
+              id="email"
+              width="25"
+              height="25"
+              alt="Email Icon"
+            />
             <p>oprahhealth@gmail.com</p>
           </div>
         </div>
       </div>
       <div class="footer-social">
-        <a href="#"><img src="../images/instagram.png" width="25" height="25" alt="Instagram" /></a>
-        <a href="#"><img src="../images/linkedin.png" width="25" height="25" alt="LinkedIn" /></a>
-        <a href="#"><img src="../images/twitter.png" width="25" height="25" alt="Twitter" /></a>
-        <a href="#"><img src="../images/youtube.png" width="25" height="25" alt="YouTube" /></a>
-        <a href="#"><img src="../images/facebook.png" width="25" height="25" alt="Facebook" /></a>
+        <a href="#"
+          ><img
+            src="../images/instagram.png"
+            width="25"
+            height="25"
+            alt="Instagram"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/linkedin.png"
+            width="25"
+            height="25"
+            alt="LinkedIn"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/twitter.png"
+            width="25"
+            height="25"
+            alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/youtube.png"
+            width="25"
+            height="25"
+            alt="YouTube"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/facebook.png"
+            width="25"
+            height="25"
+            alt="Facebook"
+        /></a>
       </div>
       <p class="copyright">&copy; 2025 Oprah. All Rights Reserved.</p>
     </footer>
 
-    <!-- EmailJS Form Submission Script with Loading Spinner, Toast Notification, and Form Reset -->
     <script>
-      document.getElementById('apply-form').addEventListener('submit', async function (e) {
-        e.preventDefault();
-    
-        var spinner = document.getElementById('spinner');
-        spinner.classList.add('show');
-    
-        const form = this;
-        const fileInput = document.getElementById('resume');
-        const file = fileInput.files[0];
-    
-        if (!file) {
-          alert("Please upload a resume.");
-          spinner.classList.remove('show');
-          return;
-        }
-    
-        // Read file as base64
-        const reader = new FileReader();
-        reader.onload = async function () {
-          const base64 = reader.result.split(',')[1];
-    
-          // Upload to Google Drive via Apps Script
-          const uploadResponse = await fetch('https://script.google.com/macros/s/AKfycbxF1I9AusJH88qNX5OSeGW5527GSd-j_ltRy_5Jb9QFURBqpnRHJJKLRlsqCsQulEU/exec', {
-            method: 'POST',
-            body: new URLSearchParams({
-              file: base64,
-              filename: file.name,
-              mimeType: file.type
-            }),
-          });
-    
-          const fileUrl = await uploadResponse.text();
-    
-          if (fileUrl.startsWith("Error")) {
-            alert("Upload failed: " + fileUrl);
-            spinner.classList.remove('show');
-            return;
-          }
-          console.log("Drive URL:", fileUrl);
-    
-          // Add hidden input for resume_link
-          let hiddenInput = document.createElement("input");
-          hiddenInput.type = "hidden";
-          hiddenInput.name = "resume";
-          hiddenInput.value = fileUrl;
-          form.appendChild(hiddenInput);
+      document.addEventListener("DOMContentLoaded", () => {
+        // MOBILE MENU
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector(".nav");
+        if (hamburger && nav) {
+          const overlay = document.createElement("div");
+          overlay.className = "nav-overlay";
+          document.body.appendChild(overlay);
 
-          // after you've successfully appended your hidden resume_link input...
-          fileInput.removeAttribute('name');   // <<-- this prevents the file from being included
+          const toggleMenu = () => {
+            hamburger.classList.toggle("open");
+            nav.classList.toggle("open");
+            overlay.classList.toggle("visible");
+          };
 
-    
-          // Send form via EmailJS
-          emailjs.sendForm("service_4mbywvc", "template_ayrjjp8", form)
-            .then(function () {
-              spinner.classList.remove('show');
-              document.getElementById('toast').classList.add('show');
-              form.reset();
-              setTimeout(() => document.getElementById('toast').classList.remove('show'), 3000);
-            }, function (error) {
-              spinner.classList.remove('show');
-              alert('Failed to send message.');
-              console.error('EmailJS error:', error);
+          hamburger.addEventListener("click", toggleMenu);
+          overlay.addEventListener("click", toggleMenu);
+
+          // Only close for “real” nav links, not the dropdown toggle/items
+          nav.querySelectorAll("a").forEach((link) => {
+            if (
+              link.classList.contains("dropbtn") ||
+              link.closest(".dropdown-content")
+            )
+              return;
+
+            link.addEventListener("click", () => {
+              if (nav.classList.contains("open")) toggleMenu();
             });
-        };
-    
-        reader.readAsDataURL(file);
+          });
+        }
       });
     </script>
-    
 
+    <!-- EmailJS Form Submission Script with Loading Spinner, Toast Notification, and Form Reset -->
+    <script>
+      document
+        .getElementById("apply-form")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          var spinner = document.getElementById("spinner");
+          spinner.classList.add("show");
+
+          const form = this;
+          const fileInput = document.getElementById("resume");
+          const file = fileInput.files[0];
+
+          if (!file) {
+            alert("Please upload a resume.");
+            spinner.classList.remove("show");
+            return;
+          }
+
+          // Read file as base64
+          const reader = new FileReader();
+          reader.onload = async function () {
+            const base64 = reader.result.split(",")[1];
+
+            // Upload to Google Drive via Apps Script
+            const uploadResponse = await fetch(
+              "https://script.google.com/macros/s/AKfycbxF1I9AusJH88qNX5OSeGW5527GSd-j_ltRy_5Jb9QFURBqpnRHJJKLRlsqCsQulEU/exec",
+              {
+                method: "POST",
+                body: new URLSearchParams({
+                  file: base64,
+                  filename: file.name,
+                  mimeType: file.type,
+                }),
+              }
+            );
+
+            const fileUrl = await uploadResponse.text();
+
+            if (fileUrl.startsWith("Error")) {
+              alert("Upload failed: " + fileUrl);
+              spinner.classList.remove("show");
+              return;
+            }
+            console.log("Drive URL:", fileUrl);
+
+            // Add hidden input for resume_link
+            let hiddenInput = document.createElement("input");
+            hiddenInput.type = "hidden";
+            hiddenInput.name = "resume";
+            hiddenInput.value = fileUrl;
+            form.appendChild(hiddenInput);
+
+            // after you've successfully appended your hidden resume_link input...
+            fileInput.removeAttribute("name"); // <<-- this prevents the file from being included
+
+            // Send form via EmailJS
+            emailjs.sendForm("service_4mbywvc", "template_ayrjjp8", form).then(
+              function () {
+                spinner.classList.remove("show");
+                document.getElementById("toast").classList.add("show");
+                form.reset();
+                setTimeout(
+                  () =>
+                    document.getElementById("toast").classList.remove("show"),
+                  3000
+                );
+              },
+              function (error) {
+                spinner.classList.remove("show");
+                alert("Failed to send message.");
+                console.error("EmailJS error:", error);
+              }
+            );
+          };
+
+          reader.readAsDataURL(file);
+        });
+    </script>
   </body>
 </html>

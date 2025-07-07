@@ -1,138 +1,246 @@
 <!-- myoprah.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>MyOprah | Top Doctor‑Booking Platform</title>
-  <link href="../images/Oprah.png" rel="icon" />
-  <link rel="stylesheet" href="../styles/myoprah.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>MyOprah | Top Doctor‑Booking Platform</title>
+    <link href="../images/Oprah.png" rel="icon" />
+    <link rel="stylesheet" href="../styles/myoprah.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-top container">
+        <img
+          class="logo"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
+      <!-- hamburger for mobile -->
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header-top container">
-      <img class="logo" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
-      <nav class="nav">
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html" class="contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero container">
-    <h1>MyOprah: Your All‑in‑One Health Booking & Pharmacy</h1>
-    <p>Book top doctors, order meds online, and keep a digital health record—all in one place.</p>
-    <div class="hero-cta">
-      <a href="#" class="btn-download">Download the App</a>
-      <button class="btn-register">Register Clinic</button>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section class="stats container">
-    <div class="stat-card">
-      <span class="stat-number">250k+</span>
-      <span class="stat-label">Appointments</span>
-    </div>
-    <div class="stat-card">
-      <span class="stat-number">2,000+</span>
-      <span class="stat-label">Doctors</span>
-    </div>
-  </section>
-
-  <!-- FEATURES GRID -->
-  <section class="features container">
-    <article class="feature">
-      <img src="../images/search.png" alt="" class="feature-icon"/>
-      <h3>Find & Book Doctors</h3>
-      <p>Easily search, compare & book in‑clinic or teleconsultations.</p>
-    </article>
-    <article class="feature">
-      <img src="../images/bulb.png" alt="" class="feature-icon"/>
-      <h3>Digital Medical Records</h3>
-      <p>Your prescriptions & reports accessible 24/7.</p>
-    </article>
-    <article class="feature">
-      <img src="../images/message.png" alt="" class="feature-icon"/>
-      <h3>In‑App Messaging</h3>
-      <p>Chat with doctors, get reminders, and manage follow‑ups.</p>
-    </article>
-    <article class="feature">
-      <img src="../images/aid.png" alt="" class="feature-icon"/>
-      <h3>Online Pharmacy</h3>
-      <p>Order your meds with doorstep delivery.</p>
-    </article>
-  </section>
-
-  <!-- FOOTER SECTION -->
-  <footer class="footer container">
-    <div class="footer-logo">
-      <img class="logo" id="logo1" src="../images/Oprah.png" width="80" height="35" alt="Oprah Logo" />
-      <p class="footertxt">Understand, Track and Improve Your Health</p>
-      <div class="download-links">
-        <a href="#" class="store-link">
-          <img src="../images/apple3.png" alt="App Store" />
-          <span>Download on the App Store</span>
-        </a>
-        <a href="#" class="store-link">
-          <img src="../images/playstore.png" width="49" height="49" alt="Google Play" />
-          <span>Get it on Google Play</span>
-        </a>
+        <!-- navigation -->
+        <nav class="nav">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="careers.html">Careers</a>
+          <a class="contact" id="cont" href="contact.html">Contact Us</a>
+        </nav>
       </div>
-    </div>
-    <div class="footer-links">
-      <div class="about-links">
-        <h3>About Us</h3>
-        <ul>
-          <li><a href="#">Our Provider Digitalization Suite</a></li>
-          <li><a href="#">Oprah Systems</a></li>
-          <li><a href="#">Oprah Doc</a></li>
-          <li><a href="#">Public Health &amp; Data Partnership</a></li>
-          <li><a href="#">Data and Insights</a></li>
-        </ul>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero container">
+      <h1>MyOprah: Your All‑in‑One Health Booking & Pharmacy</h1>
+      <p>
+        Book top doctors, order meds online, and keep a digital health
+        record—all in one place.
+      </p>
+      <div class="hero-cta">
+        <a href="#" class="btn-download">Download the App</a>
+        <button class="btn-register">Register Clinic</button>
       </div>
-      <div class="legal-links">
-        <h3>Legal</h3>
-        <ul>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy Notice</a></li>
-          <li><a href="#">Information Security</a></li>
-          <li><a href="#">Oprah Service Levels</a></li>
-          <li><a href="#">Cookie Notice</a></li>
-          <li><a href="#">Consent for Children</a></li>
-          <li><a href="#">Consent for Adult</a></li>
-        </ul>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats container">
+      <div class="stat-card">
+        <span class="stat-number">250k+</span>
+        <span class="stat-label">Appointments</span>
       </div>
-      <div class="contact-info">
-        <div class="location">
-          <img src="../images/location.png" width="25" height="25" alt="Location Icon" />
-          <p>Yaoundé, Cameroon</p>
-        </div>
-        <div class="phone">
-          <img src="../images/phone.png" width="25" height="25" alt="Phone Icon" />
-          <p>+237 679 724 561</p>
-        </div>
-        <div class="email">
-          <img src="../images/mail.png" id="email" width="25" height="25" alt="Email Icon" />
-          <p>oprahhealth@gmail.com</p>
+      <div class="stat-card">
+        <span class="stat-number">2,000+</span>
+        <span class="stat-label">Doctors</span>
+      </div>
+    </section>
+
+    <!-- FEATURES GRID -->
+    <section class="features container">
+      <article class="feature">
+        <img src="../images/search.png" alt="" class="feature-icon" />
+        <h3>Find & Book Doctors</h3>
+        <p>Easily search, compare & book in‑clinic or teleconsultations.</p>
+      </article>
+      <article class="feature">
+        <img src="../images/bulb.png" alt="" class="feature-icon" />
+        <h3>Digital Medical Records</h3>
+        <p>Your prescriptions & reports accessible 24/7.</p>
+      </article>
+      <article class="feature">
+        <img src="../images/message.png" alt="" class="feature-icon" />
+        <h3>In‑App Messaging</h3>
+        <p>Chat with doctors, get reminders, and manage follow‑ups.</p>
+      </article>
+      <article class="feature">
+        <img src="../images/aid.png" alt="" class="feature-icon" />
+        <h3>Online Pharmacy</h3>
+        <p>Order your meds with doorstep delivery.</p>
+      </article>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer container">
+      <div class="footer-logo">
+        <img
+          class="logo"
+          src="../images/Oprah.png"
+          width="80"
+          height="35"
+          alt="Oprah Logo"
+        />
+        <p class="footertxt">Understand, Track and Improve Your Health</p>
+        <div class="download-links">
+          <a href="#" class="store-link">
+            <img src="../images/apple3.png" alt="App Store" />
+            <span>Download on the App Store</span>
+          </a>
+          <a href="#" class="store-link">
+            <img
+              src="../images/playstore.png"
+              width="49"
+              height="49"
+              alt="Google Play"
+            />
+            <span>Get it on Google Play</span>
+          </a>
         </div>
       </div>
-    </div>
-    <div class="footer-social">
-      <a href="#"><img src="../images/instagram.png" width="25" height="25" alt="Instagram" /></a>
-      <a href="#"><img src="../images/linkedin.png" width="25" height="25" alt="LinkedIn" /></a>
-      <a href="#"><img src="../images/twitter.png" width="25" height="25" alt="Twitter" /></a>
-      <a href="#"><img src="../images/youtube.png" width="25" height="25" alt="YouTube" /></a>
-      <a href="#"><img src="../images/facebook.png" width="25" height="25" alt="Facebook" /></a>
-    </div>
-    <p class="copyright">&copy; 2025 Oprah. All Rights Reserved.</p>
-  </footer>
+      <div class="footer-links">
+        <div class="about-links">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="#">Our Provider Digitalization Suite</a></li>
+            <li><a href="#">Oprah Systems</a></li>
+            <li><a href="#">Oprah Doc</a></li>
+            <li><a href="#">Public Health &amp; Data Partnership</a></li>
+            <li><a href="#">Data and Insights</a></li>
+          </ul>
+        </div>
+        <div class="legal-links">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Notice</a></li>
+            <li><a href="#">Information Security</a></li>
+            <li><a href="#">Oprah Service Levels</a></li>
+            <li><a href="#">Cookie Notice</a></li>
+            <li><a href="#">Consent for Children</a></li>
+            <li><a href="#">Consent for Adult</a></li>
+          </ul>
+        </div>
+        <div class="contact-info">
+          <div class="location">
+            <img
+              src="../images/location.png"
+              width="25"
+              height="25"
+              alt="Location Icon"
+            />
+            <p>Yaoundé, Cameroon</p>
+          </div>
+          <div class="phone">
+            <img
+              src="../images/phone.png"
+              width="25"
+              height="25"
+              alt="Phone Icon"
+            />
+            <p>+237 679 724 561</p>
+          </div>
+          <div class="email">
+            <img
+              src="../images/mail.png"
+              id="email"
+              width="25"
+              height="25"
+              alt="Email Icon"
+            />
+            <p>oprahhealth@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="#"
+          ><img
+            src="../images/instagram.png"
+            width="25"
+            height="25"
+            alt="Instagram"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/linkedin.png"
+            width="25"
+            height="25"
+            alt="LinkedIn"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/twitter.png"
+            width="25"
+            height="25"
+            alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/youtube.png"
+            width="25"
+            height="25"
+            alt="YouTube"
+        /></a>
+        <a href="#"
+          ><img
+            src="../images/facebook.png"
+            width="25"
+            height="25"
+            alt="Facebook"
+        /></a>
+      </div>
+      <p class="copyright">&copy; 2025 Oprah. All Rights Reserved.</p>
+    </footer>
 
-</body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // MOBILE MENU
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector(".nav");
+        if (hamburger && nav) {
+          const overlay = document.createElement("div");
+          overlay.className = "nav-overlay";
+          document.body.appendChild(overlay);
+
+          const toggleMenu = () => {
+            hamburger.classList.toggle("open");
+            nav.classList.toggle("open");
+            overlay.classList.toggle("visible");
+          };
+
+          hamburger.addEventListener("click", toggleMenu);
+          overlay.addEventListener("click", toggleMenu);
+
+          // Only close for “real” nav links, not the dropdown toggle/items
+          nav.querySelectorAll("a").forEach((link) => {
+            if (
+              link.classList.contains("dropbtn") ||
+              link.closest(".dropdown-content")
+            )
+              return;
+
+            link.addEventListener("click", () => {
+              if (nav.classList.contains("open")) toggleMenu();
+            });
+          });
+        }
+      });
+    </script>
+
+  </body>
 </html>

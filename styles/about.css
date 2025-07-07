@@ -1,7 +1,29 @@
 /* =========================================
    Global Styles & CSS Variables
 ======================================== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* CSS Variables & Global Reset */
+:root {
+  --color-primary: #2c3e50;
+  --color-secondary: #27ae60;
+  --color-accent: #8e44ad;
+  --color-light: #ecf0f1;
+  --color-dark: #34495e;
+  --color-text: #2c3e50;
+  --color-text-light: #ffffff;
+  --light-gray: #f0f0f0;
+  --blue: #005f9e;
+  --green: #3da68d;
+  --white: #ffffff;
+  --transition-fast: 0.3s ease-in-out;
+  --max-width: 1200px;
+  --spacing: 1.5rem;
+  --radius: 0.5rem;
+  --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.15);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
 
 *,
 *::before,
@@ -11,24 +33,14 @@
   box-sizing: border-box;
 }
 
-:root {
-  --blue: #0f75bc;
-  --green: #56ad89;
-  --primary-blue: #0f75bc;
-  --accent-green: #56ad89;
-  --white: #ffffff;
-  --darkGray: #333;
-  --light-gray: #f0f0f0;
-  --transition-speed: 0.3s;
-  --font-primary: 'Roboto', sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-primary);
-  background: #f9f9f9;
-  color: #333;
+  color: var(--color-text);
+  background: var(--color-light);
 }
-
 a {
   text-decoration: none;
   color: var(--white);
@@ -40,6 +52,41 @@ a {
   margin: auto;
   padding: 1rem;
 }
+
+/* ── Hamburger Icon ───────────────────────────────────────────────── */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.8rem;
+  height: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 
 /* =========================================
    HEADER SECTION
@@ -64,35 +111,30 @@ a {
 
 .nav {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
+  gap: var(--spacing);
 }
-
 .nav a {
-  font-weight: 700;
-  padding: 8px 12px;
-  background-color: var(--blue);
-  border-radius: 8px;
-  transition: background var(--transition-speed);
+  color: var(--color-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+.nav a:hover {
+  color: var(--blue);
+}
+.contact {
+  background: var(--color-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+}
+#cont:hover{
+color: var(--color-white);
 }
 
-.nav a:hover,
-.dropbtn:hover {
-  background-color: var(--green);
+.show {
+  display: block;
 }
-
-#logo1 {
-  background-color: var(--green);
-  border-radius: 10%;
-  padding: 2px;
-  cursor: pointer;
-}
-
-#logo1:hover {
-  background-color: var(--white);
-}
-
 /* Hero Section (Header Rectangle with Overlay) */
 .hero {
   position: relative;
@@ -137,6 +179,109 @@ a {
   color: var(--darkGray);
 }
 
+/*──────────────────────────────────────────────────────────────────────────*/
+/*  About‑Home Section (mimics AboutSection styles)                        */
+/*──────────────────────────────────────────────────────────────────────────*/
+
+.about-home {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-light);
+  padding: 4rem 1rem;
+  margin: 4rem auto;
+  max-width: var(--max-width);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--spacing);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-home.visible .about-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* floating bubbles */
+.about-home .bubble {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(198, 156, 109, 0.2);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}
+.about-home .bubble:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation-duration: 5s;
+}
+.about-home .bubble:nth-child(2) {
+  top: 50%;
+  left: 75%;
+  animation-duration: 7s;
+}
+.about-home .bubble:nth-child(3) {
+  top: 80%;
+  left: 40%;
+  animation-duration: 6.5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+  }
+}
+
+/* content columns */
+.about-content .about-image {
+  /* renamed to match your wrapper */
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.about-content .about-image img {
+  /* renamed to match your .image class */
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-content .about-image:hover img {
+  transform: scale(1.05);
+}
+
+.about-text .preTitle {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.about-text .title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+  line-height: 1.3;
+}
+.about-text .text {
+  font-size: 1rem;
+  color: var(--color-gray-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
 /* Enhanced Our Story Section with Two-Column Layout */
 .our-story {
   margin-bottom: 2rem;
@@ -173,18 +318,18 @@ a {
   flex-wrap: wrap;
 }
 
-.mission{
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+.mission {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
-.mission:hover{
+.mission:hover {
   transform: translateY(-3px);
 }
-.vision{
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+.vision {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
-.vision:hover{
+.vision:hover {
   transform: translateY(-3px);
 }
 .mission-vision > div {
@@ -192,7 +337,7 @@ a {
   background: var(--white);
   padding: 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 .mission-vision h3 {
@@ -248,22 +393,18 @@ a {
   color: var(--darkGray);
 }
 
-/* =========================================
-   FOOTER SECTION
-======================================== */
+/* Footer */
 .footer {
-  background-color: var(--blue);
-  color: var(--white);
-  padding: 40px 20px;
-  margin-top: 3rem;
+  background: var(--color-dark);
+  color: var(--color-text-light);
+  padding: 4rem 0 2rem;
 }
 .footer-logo {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: var(--spacing);
 }
-.footer-logo p {
-  font-size: 1.2rem;
-  margin: 10px 0;
+.footer-logo img {
+  margin-bottom: 1rem;
 }
 .download-links {
   display: flex;
@@ -275,62 +416,56 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  color: var(--white);
   gap: 5px;
   font-size: 0.9rem;
 }
 .footer-links {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 30px;
+  flex-wrap: wrap;
   text-align: center;
+  gap: var(--spacing);
+  margin-bottom: var(--spacing);
 }
 .footer-links h3 {
-  margin-bottom: 10px;
+  margin-bottom: 0.75rem;
 }
 .footer-links ul {
-  list-style-type: none;
-}
-.footer-links li {
-  margin-bottom: 5px;
+  list-style: none;
 }
 .footer-links a {
-  color: var(--white);
-  transition: color var(--transition-speed);
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
 }
 .footer-links a:hover {
-  color: var(--green);
-}
-.contact-info {
-  text-align: center;
+  color: var(--color-secondary);
 }
 .contact-info div {
-  margin: 10px 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .footer-social {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing);
 }
 .footer-social a {
-  margin: 0 5px;
+  margin: 0 0.5rem;
+  display: inline-block;
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
 }
-.footertxt {
-  margin: 10px 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-#email {
-  background-color: var(--blue);
+.footer-social a:hover {
+  opacity: 1;
 }
 .copyright {
   text-align: center;
-  font-size: 0.9rem;
-  padding: 10px 0;
-  background-color: var(--blue);
+  font-size: 0.85rem;
 }
 
 /* =========================================
@@ -338,12 +473,55 @@ a {
 ======================================== */
 @media (max-width: 768px) {
   .header-top,
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-  }
   .header-content {
     padding: 20px;
+  }
+   .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0; /* anchor to the right */
+    height: 100vh;
+    width: 100vw; /* full viewport width */
+    background: var(--color-light);
+    padding: var(--spacing) 1.5rem;
+    transform: translateX(100%); /* start fully off‑screen to the right */
+    transition: transform var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    z-index: 1000;
+  }
+
+  /* slide in when open */
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  /* style links for mobile */
+  .nav a,
+  .nav .dropbtn {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+  }
+
+  /* overlay to darken the rest of the page */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+  }
+
+  .nav-overlay.visible {
+    display: block;
   }
   .story-grid {
     grid-template-columns: 1fr;
@@ -358,6 +536,20 @@ a {
   .container {
     padding: 20px;
   }
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .about-image {
+    order: 1;
+    margin-bottom: var(--spacing);
+  }
+  .about-text {
+    order: 2;
+  }
+  .about-home .bubble {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -367,9 +559,19 @@ a {
   .header-text p {
     font-size: 1rem;
   }
+  .about-text .title {
+    font-size: 1.5rem;
+  }
+  .about-text .text {
+    font-size: 0.95rem;
+  }
+  .about-text .cta {
+    width: 100%;
+    margin: 0 auto;
+  }
   .nav a {
     font-size: 0.9rem;
-    padding: 0.5rem 0.75rem;
+    padding: 6px 10px;
   }
   .footer-logo p,
   .footertxt {
